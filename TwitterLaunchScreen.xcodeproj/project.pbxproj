@@ -14,6 +14,8 @@
 		B8461D862CE3E5C70042263E /* TwitterLaunchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D852CE3E5C70042263E /* TwitterLaunchScreenTests.swift */; };
 		B8461D902CE3E5C70042263E /* TwitterLaunchScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D8F2CE3E5C70042263E /* TwitterLaunchScreenUITests.swift */; };
 		B8461D922CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */; };
+		B8461DA02CE3EAA20042263E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */; };
+		B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		B8461D8B2CE3E5C70042263E /* TwitterLaunchScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterLaunchScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8461D8F2CE3E5C70042263E /* TwitterLaunchScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLaunchScreenUITests.swift; sourceTree = "<group>"; };
 		B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLaunchScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8461D9E2CE3E8EC0042263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchManagerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +99,11 @@
 		B8461D732CE3E5C10042263E /* TwitterLaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B8461D9E2CE3E8EC0042263E /* Info.plist */,
 				B8461D742CE3E5C10042263E /* TwitterLaunchScreenApp.swift */,
+				B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */,
 				B8461D762CE3E5C10042263E /* ContentView.swift */,
+				B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */,
 				B8461D782CE3E5C60042263E /* Assets.xcassets */,
 				B8461D7A2CE3E5C60042263E /* Preview Content */,
 			);
@@ -259,6 +267,8 @@
 			files = (
 				B8461D772CE3E5C10042263E /* ContentView.swift in Sources */,
 				B8461D752CE3E5C10042263E /* TwitterLaunchScreenApp.swift in Sources */,
+				B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */,
+				B8461DA02CE3EAA20042263E /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,9 +434,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwitterLaunchScreen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TwitterLaunchScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,9 +462,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TwitterLaunchScreen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TwitterLaunchScreen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
