@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // ignore the second environment variable
     @EnvironmentObject var launchManager : LaunchScreenManager
     @EnvironmentObject var anotherManager : LaunchScreenManager
     
