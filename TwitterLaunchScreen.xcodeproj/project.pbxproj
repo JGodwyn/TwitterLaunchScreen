@@ -16,6 +16,9 @@
 		B8461D922CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */; };
 		B8461DA02CE3EAA20042263E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */; };
 		B86456D62D038F5D00C2D020 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456D52D038F5D00C2D020 /* LogIn.swift */; };
+		B86456D92D03931700C2D020 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456D82D03931700C2D020 /* ButtonStyles.swift */; };
+		B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456DA2D03935900C2D020 /* ButtonComponents.swift */; };
+		B86456DE2D03942E00C2D020 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456DD2D03942E00C2D020 /* UserLoginModel.swift */; };
 		B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		B8461D9E2CE3E8EC0042263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B86456D52D038F5D00C2D020 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		B86456D82D03931700C2D020 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		B86456DA2D03935900C2D020 /* ButtonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponents.swift; sourceTree = "<group>"; };
+		B86456DD2D03942E00C2D020 /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
 		B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchManagerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,8 @@
 				B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */,
 				B8461D762CE3E5C10042263E /* ContentView.swift */,
 				B86456D52D038F5D00C2D020 /* LogIn.swift */,
+				B86456DC2D03941400C2D020 /* Models */,
+				B86456D72D0392F700C2D020 /* Components */,
 				B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */,
 				B8461D782CE3E5C60042263E /* Assets.xcassets */,
 				B8461D7A2CE3E5C60042263E /* Preview Content */,
@@ -136,6 +144,23 @@
 				B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */,
 			);
 			path = TwitterLaunchScreenUITests;
+			sourceTree = "<group>";
+		};
+		B86456D72D0392F700C2D020 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B86456D82D03931700C2D020 /* ButtonStyles.swift */,
+				B86456DA2D03935900C2D020 /* ButtonComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B86456DC2D03941400C2D020 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B86456DD2D03942E00C2D020 /* UserLoginModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86456DE2D03942E00C2D020 /* UserLoginModel.swift in Sources */,
 				B86456D62D038F5D00C2D020 /* LogIn.swift in Sources */,
+				B86456D92D03931700C2D020 /* ButtonStyles.swift in Sources */,
+				B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */,
 				B8461D772CE3E5C10042263E /* ContentView.swift in Sources */,
 				B8461D752CE3E5C10042263E /* TwitterLaunchScreenApp.swift in Sources */,
 				B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */,

@@ -11,31 +11,14 @@ struct ContentView: View {
     
     // ignore the second environment variable
     @EnvironmentObject var launchManager : LaunchScreenManager
-    @EnvironmentObject var anotherManager : LaunchScreenManager
+    @EnvironmentObject var userManager : UserClass
+    @State private var showLogoutAlert : Bool = false
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text(launchManager.testString)
-            Text(anotherManager.testString)
-            
-            Button("Click me") {
-                // logic here
-            }
-        }
-        .padding()
-        .onAppear {
-            launchManager.testString = "Launch Manager"
-            anotherManager.testString = "Yet Another Manager"
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                withAnimation {
-                    launchManager.dismiss()
-                }
-            }
+        if userManager.currentState == .loggingOut {
+            loggingOut
+        } else {
+            mainContent
         }
     }
 }
@@ -43,4 +26,45 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(LaunchScreenManager())
+        .environmentObject(UserClass())
+}
+
+private extension ContentView {
+    
+    var mainContent : some View {
+        List {
+            Text(userManager.userObj.username)
+                .font(.system(size: 20, weight: .bold))
+                .listRowSeparator(.hidden)
+            
+            
+            MainButton(label: "Log Out", color: .red) {
+                showLogoutAlert.toggle()
+            }
+            .listRowSeparator(.hidden)
+        }
+        .listStyle(.plain)
+        .alert("Log Out", isPresented: $showLogoutAlert) {
+            Button("Log Out", role:.destructive) {
+                userManager.logout()
+            }
+        } message: {
+            Text("Are you sure you want to logout?")
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                withAnimation {
+                    launchManager.dismiss()
+                }
+            }
+        }
+    }
+    
+    
+    var loggingOut : some View {
+        VStack {
+            Text("Logging out ...")
+            ProgressView()
+        }
+    }
 }
