@@ -12,6 +12,8 @@ struct ContentView: View {
     // ignore the second environment variable
     @EnvironmentObject var launchManager : LaunchScreenManager
     @EnvironmentObject var userManager : UserClass
+    @EnvironmentObject var postManager : PostClass
+    @EnvironmentObject var sheetManager : SheetClass
     @State private var showLogoutAlert : Bool = false
     
     var body: some View {
@@ -19,6 +21,7 @@ struct ContentView: View {
             loggingOut
         } else {
             mainContent
+                .modifier(PopUpModifier(sheetManager: sheetManager))
         }
     }
 }
@@ -27,34 +30,43 @@ struct ContentView: View {
     ContentView()
         .environmentObject(LaunchScreenManager())
         .environmentObject(UserClass())
+        .environmentObject(PostClass())
+        .environmentObject(SheetClass())
 }
 
 private extension ContentView {
     
     var mainContent : some View {
-        List {
-            Text(userManager.userObj.username)
-                .font(.system(size: 20, weight: .bold))
-                .listRowSeparator(.hidden)
-            
-            
-            MainButton(label: "Log Out", color: .red) {
-                showLogoutAlert.toggle()
+        NavigationStack {
+            List {
+                ForEach(postManager.postManager) { item in
+                    PostComponent(content: item, userManager: userManager) {
+                        withAnimation {
+                            sheetManager.present(obj: .init(iconName: "trash", title: "Are you sure you want to delete this item?", description: item.description))
+                        }
+                    }
+                        .buttonStyle(PlainButtonStyle()) // you need this to tell Swift that the whole row body should not be interactive.
+                }
             }
-            .listRowSeparator(.hidden)
-        }
-        .listStyle(.plain)
-        .alert("Log Out", isPresented: $showLogoutAlert) {
-            Button("Log Out", role:.destructive) {
-                userManager.logout()
+            .navigationTitle(Text(userManager.userObj.username + " Posts"))
+            .toolbar {
+                Button("Log Out", role: .destructive) {
+                    showLogoutAlert.toggle()
+                }
             }
-        } message: {
-            Text("Are you sure you want to logout?")
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                withAnimation {
-                    launchManager.dismiss()
+            .listStyle(.plain)
+            .alert("Log Out", isPresented: $showLogoutAlert) {
+                Button("Log Out", role:.destructive) {
+                    userManager.logout()
+                }
+            } message: {
+                Text("Are you sure you want to logout?")
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    withAnimation {
+                        launchManager.dismiss()
+                    }
                 }
             }
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B831E9CE2D04FC6300AB5BB0 /* PostComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831E9CD2D04FC6300AB5BB0 /* PostComponent.swift */; };
 		B8461D752CE3E5C10042263E /* TwitterLaunchScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D742CE3E5C10042263E /* TwitterLaunchScreenApp.swift */; };
 		B8461D772CE3E5C10042263E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D762CE3E5C10042263E /* ContentView.swift */; };
 		B8461D792CE3E5C60042263E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8461D782CE3E5C60042263E /* Assets.xcassets */; };
@@ -15,6 +16,10 @@
 		B8461D902CE3E5C70042263E /* TwitterLaunchScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D8F2CE3E5C70042263E /* TwitterLaunchScreenUITests.swift */; };
 		B8461D922CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */; };
 		B8461DA02CE3EAA20042263E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */; };
+		B84E5CCB2D095AFA00B6BC00 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5CCA2D095AFA00B6BC00 /* PostModel.swift */; };
+		B84E5CCE2D0972A300B6BC00 /* PostDeleteConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5CCD2D0972A300B6BC00 /* PostDeleteConfirmation.swift */; };
+		B84E5CD02D097B0100B6BC00 /* AllViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5CCF2D097B0100B6BC00 /* AllViewModifiers.swift */; };
+		B84E5CD22D097E9600B6BC00 /* SheetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E5CD12D097E9600B6BC00 /* SheetModels.swift */; };
 		B86456D62D038F5D00C2D020 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456D52D038F5D00C2D020 /* LogIn.swift */; };
 		B86456D92D03931700C2D020 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456D82D03931700C2D020 /* ButtonStyles.swift */; };
 		B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456DA2D03935900C2D020 /* ButtonComponents.swift */; };
@@ -40,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B831E9CD2D04FC6300AB5BB0 /* PostComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComponent.swift; sourceTree = "<group>"; };
 		B8461D712CE3E5C10042263E /* TwitterLaunchScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLaunchScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8461D742CE3E5C10042263E /* TwitterLaunchScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLaunchScreenApp.swift; sourceTree = "<group>"; };
 		B8461D762CE3E5C10042263E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,10 @@
 		B8461D912CE3E5C70042263E /* TwitterLaunchScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLaunchScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B8461D9E2CE3E8EC0042263E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		B84E5CCA2D095AFA00B6BC00 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		B84E5CCD2D0972A300B6BC00 /* PostDeleteConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDeleteConfirmation.swift; sourceTree = "<group>"; };
+		B84E5CCF2D097B0100B6BC00 /* AllViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewModifiers.swift; sourceTree = "<group>"; };
+		B84E5CD12D097E9600B6BC00 /* SheetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModels.swift; sourceTree = "<group>"; };
 		B86456D52D038F5D00C2D020 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		B86456D82D03931700C2D020 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		B86456DA2D03935900C2D020 /* ButtonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponents.swift; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 				B8461D762CE3E5C10042263E /* ContentView.swift */,
 				B86456D52D038F5D00C2D020 /* LogIn.swift */,
 				B86456DC2D03941400C2D020 /* Models */,
+				B84E5CCC2D09725500B6BC00 /* Sheets */,
 				B86456D72D0392F700C2D020 /* Components */,
 				B8461D9F2CE3EAA20042263E /* LaunchScreenView.swift */,
 				B8461D782CE3E5C60042263E /* Assets.xcassets */,
@@ -146,11 +157,21 @@
 			path = TwitterLaunchScreenUITests;
 			sourceTree = "<group>";
 		};
+		B84E5CCC2D09725500B6BC00 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				B84E5CCD2D0972A300B6BC00 /* PostDeleteConfirmation.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		B86456D72D0392F700C2D020 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B831E9CD2D04FC6300AB5BB0 /* PostComponent.swift */,
 				B86456D82D03931700C2D020 /* ButtonStyles.swift */,
 				B86456DA2D03935900C2D020 /* ButtonComponents.swift */,
+				B84E5CCF2D097B0100B6BC00 /* AllViewModifiers.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -158,7 +179,9 @@
 		B86456DC2D03941400C2D020 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B84E5CCA2D095AFA00B6BC00 /* PostModel.swift */,
 				B86456DD2D03942E00C2D020 /* UserLoginModel.swift */,
+				B84E5CD12D097E9600B6BC00 /* SheetModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,14 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84E5CD22D097E9600B6BC00 /* SheetModels.swift in Sources */,
 				B86456DE2D03942E00C2D020 /* UserLoginModel.swift in Sources */,
+				B84E5CCB2D095AFA00B6BC00 /* PostModel.swift in Sources */,
 				B86456D62D038F5D00C2D020 /* LogIn.swift in Sources */,
+				B84E5CCE2D0972A300B6BC00 /* PostDeleteConfirmation.swift in Sources */,
 				B86456D92D03931700C2D020 /* ButtonStyles.swift in Sources */,
 				B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */,
 				B8461D772CE3E5C10042263E /* ContentView.swift in Sources */,
 				B8461D752CE3E5C10042263E /* TwitterLaunchScreenApp.swift in Sources */,
+				B831E9CE2D04FC6300AB5BB0 /* PostComponent.swift in Sources */,
 				B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */,
 				B8461DA02CE3EAA20042263E /* LaunchScreenView.swift in Sources */,
+				B84E5CD02D097B0100B6BC00 /* AllViewModifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

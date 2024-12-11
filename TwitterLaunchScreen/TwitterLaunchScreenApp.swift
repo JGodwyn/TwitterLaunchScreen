@@ -13,6 +13,8 @@ struct TwitterLaunchScreenApp: App {
     // creating a state object I can pass as an environment object.
     @StateObject var launchManager = LaunchScreenManager()
     @StateObject var userManager = UserClass()
+    @StateObject var postManager = PostClass()
+    @StateObject var sheetManager = SheetClass()
     
     // if the user has not logged in, show the login page
     
@@ -33,6 +35,8 @@ struct TwitterLaunchScreenApp: App {
             } // I can pass the environment object to the ZStack and they both have access to it
             .environmentObject(launchManager)
             .environmentObject(userManager)
+            .environmentObject(postManager)
+            .environmentObject(sheetManager)
         }
     }
 }
