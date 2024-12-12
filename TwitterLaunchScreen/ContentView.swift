@@ -15,13 +15,25 @@ struct ContentView: View {
     @EnvironmentObject var postManager : PostClass
     @EnvironmentObject var sheetManager : SheetClass
     @State private var showLogoutAlert : Bool = false
+    @State var currentPost : PostStructure = .init(user: .init(), description: "")
     
     var body: some View {
         if userManager.currentState == .loggingOut {
             loggingOut
         } else {
             mainContent
-                .modifier(PopUpModifier(sheetManager: sheetManager))
+                .addPopUp(sheetManager: sheetManager, actionable: true, btnLabel: "Delete", btnColor: .red) {
+                    withAnimation {
+                        sheetManager.dismiss()
+                        postManager.removePost(item: currentPost)
+                    }
+                }
+            //  .modifier(PopUpModifier(sheetManager: sheetManager, actionable: true, btnLabel: "Delete", btnColor: .red) {
+            //                    withAnimation {
+            //                        sheetManager.dismiss()
+            //                        postManager.removePost(item: currentPost)
+            //                    }
+            //                })
         }
     }
 }
@@ -37,22 +49,30 @@ struct ContentView: View {
 private extension ContentView {
     
     var mainContent : some View {
-        NavigationStack {
+        NavigationStack
             List {
                 ForEach(postManager.postManager) { item in
                     PostComponent(content: item, userManager: userManager) {
                         withAnimation {
                             sheetManager.present(obj: .init(iconName: "trash", title: "Are you sure you want to delete this item?", description: item.description))
                         }
+                        currentPost = item
                     }
-                        .buttonStyle(PlainButtonStyle()) // you need this to tell Swift that the whole row body should not be interactive.
+                    .buttonStyle(PlainButtonStyle()) // you need this to tell Swift that the whole row body should not be interactive.
                 }
             }
             .navigationTitle(Text(userManager.userObj.username + " Posts"))
             .toolbar {
-                Button("Log Out", role: .destructive) {
-                    showLogoutAlert.toggle()
+                HStack {
+                    Button("Log Out", role: .destructive) {
+                        showLogoutAlert.toggle()
+                    }
+                    Spacer()
+                    Button("New Post") {
+                        
+                    }
                 }
+                .frame(maxWidth: .infinity)
             }
             .listStyle(.plain)
             .alert("Log Out", isPresented: $showLogoutAlert) {

@@ -36,4 +36,14 @@ final class PostClass : ObservableObject {
     
     @Published private(set) var postManager : [PostStructure] = PostStructure.examplePost
     
+    func removePost(item : PostStructure) {
+        // checks whether the id is the same and deletes it if true
+        // had to force-unwrap cos I am sure there'd be a value
+        let mainIndex = self.postManager.firstIndex(where: { $0.id == item.id })!
+        self.postManager.remove(at: mainIndex)
+    }
+    
+    func addPost(item: PostStructure) {
+        self.postManager.append(item)
+    }
 }

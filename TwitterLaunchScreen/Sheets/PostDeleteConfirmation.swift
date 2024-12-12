@@ -10,15 +10,31 @@ import SwiftUI
 struct PostDeleteConfirmation: View {
     
     let sheetInfo : SheetClass.SheetConfig
+    var actionable : Bool = false
+    var btnLabel : String = "Edit btnLabel"
+    var btnColor : Color = .accentColor
     let tappedClose : () -> Void
+    let tappedButton : () -> Void
     
     var body: some View {
-            popUpDesign
+        //        ZStack {
+        //            Color.black.opacity(0.2)
+        //        }
+        //        .ignoresSafeArea()
+        //        .overlay (alignment: .bottom) {
+        //            popUpDesign
+        //        }
+        
+        popUpDesign
     }
 }
 
 #Preview {
-    PostDeleteConfirmation(sheetInfo: .init(iconName: "trash", title: "Delete this post?", description: "Are you sure you want to delete this post?")) {}
+    PostDeleteConfirmation(sheetInfo: .init(iconName: "trash", title: "Delete this post?", description: "Are you sure you want to delete this post?")) {
+        
+    } tappedButton: {
+        //
+    }
         .environmentObject(SheetClass())
 }
 
@@ -37,6 +53,13 @@ extension PostDeleteConfirmation {
             Image(systemName: "quote.opening")
             Text(sheetInfo.description)
                 .foregroundStyle(.gray)
+            
+            if actionable {
+                MainButton(label: btnLabel, color: btnColor, fillContainer: true) {
+                    tappedButton()
+                }
+                .padding(.top, 16)
+            }
         }
         .multilineTextAlignment(.center)
         .padding()
@@ -64,7 +87,7 @@ extension PostDeleteConfirmation {
             bottomLeading: 0.0,
             bottomTrailing: 0.0,
             topTrailing: 16),
-           style: .continuous)
+                               style: .continuous)
         .fill(.white)
         
     }
