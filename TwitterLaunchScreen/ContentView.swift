@@ -49,7 +49,7 @@ struct ContentView: View {
 private extension ContentView {
     
     var mainContent : some View {
-        NavigationStack
+        NavigationStack {
             List {
                 ForEach(postManager.postManager) { item in
                     PostComponent(content: item, userManager: userManager) {
