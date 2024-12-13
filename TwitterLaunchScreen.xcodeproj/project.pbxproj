@@ -25,6 +25,7 @@
 		B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456DA2D03935900C2D020 /* ButtonComponents.swift */; };
 		B86456DE2D03942E00C2D020 /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86456DD2D03942E00C2D020 /* UserLoginModel.swift */; };
 		B8A654CA2CE69078000AB6A7 /* LaunchManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */; };
+		B8F38EEC2D0B8FEB0034A8B2 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F38EEB2D0B8FEA0034A8B2 /* NewPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		B86456DA2D03935900C2D020 /* ButtonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponents.swift; sourceTree = "<group>"; };
 		B86456DD2D03942E00C2D020 /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
 		B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchManagerModel.swift; sourceTree = "<group>"; };
+		B8F38EEB2D0B8FEA0034A8B2 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				B8461D742CE3E5C10042263E /* TwitterLaunchScreenApp.swift */,
 				B8A654C92CE69078000AB6A7 /* LaunchManagerModel.swift */,
 				B8461D762CE3E5C10042263E /* ContentView.swift */,
+				B8F38EEB2D0B8FEA0034A8B2 /* NewPost.swift */,
 				B86456D52D038F5D00C2D020 /* LogIn.swift */,
 				B86456DC2D03941400C2D020 /* Models */,
 				B84E5CCC2D09725500B6BC00 /* Sheets */,
@@ -320,6 +323,7 @@
 				B86456DE2D03942E00C2D020 /* UserLoginModel.swift in Sources */,
 				B84E5CCB2D095AFA00B6BC00 /* PostModel.swift in Sources */,
 				B86456D62D038F5D00C2D020 /* LogIn.swift in Sources */,
+				B8F38EEC2D0B8FEB0034A8B2 /* NewPost.swift in Sources */,
 				B84E5CCE2D0972A300B6BC00 /* PostDeleteConfirmation.swift in Sources */,
 				B86456D92D03931700C2D020 /* ButtonStyles.swift in Sources */,
 				B86456DB2D03935900C2D020 /* ButtonComponents.swift in Sources */,

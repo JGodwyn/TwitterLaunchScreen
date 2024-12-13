@@ -44,6 +44,12 @@ final class PostClass : ObservableObject {
     }
     
     func addPost(item: PostStructure) {
-        self.postManager.append(item)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation {
+                self.postManager.append(item)
+                self.postManager.sort{$0.date > $1.date} // sort by date
+                // you need to add the sort here so it auto sorts itself when you add a new content
+            }
+        }
     }
 }

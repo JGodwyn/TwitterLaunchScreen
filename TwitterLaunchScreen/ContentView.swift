@@ -16,24 +16,22 @@ struct ContentView: View {
     @EnvironmentObject var sheetManager : SheetClass
     @State private var showLogoutAlert : Bool = false
     @State var currentPost : PostStructure = .init(user: .init(), description: "")
+    @State private var showPostSheet : Bool = false
     
     var body: some View {
         if userManager.currentState == .loggingOut {
             loggingOut
         } else {
             mainContent
+                .sheet(isPresented: $showPostSheet) {
+                    NewPost(userManager: userManager)
+                }
                 .addPopUp(sheetManager: sheetManager, actionable: true, btnLabel: "Delete", btnColor: .red) {
                     withAnimation {
                         sheetManager.dismiss()
                         postManager.removePost(item: currentPost)
                     }
                 }
-            //  .modifier(PopUpModifier(sheetManager: sheetManager, actionable: true, btnLabel: "Delete", btnColor: .red) {
-            //                    withAnimation {
-            //                        sheetManager.dismiss()
-            //                        postManager.removePost(item: currentPost)
-            //                    }
-            //                })
         }
     }
 }
@@ -64,12 +62,17 @@ private extension ContentView {
             .navigationTitle(Text(userManager.userObj.username + " Posts"))
             .toolbar {
                 HStack {
-                    Button("Log Out", role: .destructive) {
-                        showLogoutAlert.toggle()
+                    Button {
+                        showPostSheet.toggle()
+                    } label : {
+                        Image(systemName: "plus")
+                            .font(.system(size: 14))
+                            .bold()
+                        Text("New")
                     }
                     Spacer()
-                    Button("New Post") {
-                        
+                    Button("Log Out", role: .destructive) {
+                        showLogoutAlert.toggle()
                     }
                 }
                 .frame(maxWidth: .infinity)
